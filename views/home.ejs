@@ -1,0 +1,23 @@
+<%- include("partials/_header.ejs") -%>
+
+<body class="min-h-screen flex justify-center mt-[8rem] bg-gradient-to-tr from-[#0F2027] to-[#2C5364]">
+    <div class="w-[360px]">
+        <%- include("partials/_nav.ejs") -%>
+        <div>
+            <h1 class="text-white text-3xl text-center uppercase border-2 mt-4 py-3">Todos</h1>
+            <div class="mt-4 min-h-[320px]">
+                <% if (todos.length > 0) { %>
+                    <% for (let i = 0; i < todos.length; i++) { %>
+                        <div class="flex justify-between items-center bg-white py-1 px-4 rounded mb-4">
+                            <p><%= todos[i].title %></p>
+                            <a href="/delete/<%= todos[i].id %>?_method=DELETE" class="text-red-500"><i class="fa-solid fa-trash"></i></a>
+                        </div>
+                    <% } %>
+                <% } else { %>
+                    <p class="bg-white w-full py-1 pl-4 rounded">Todo is empty</p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
