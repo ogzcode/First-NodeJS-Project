@@ -1,0 +1,36 @@
+# Python compiled files
+*.pyc
+
+# Python bytecode cache
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+# Dependency directories
+__pycache__/
+.venv/
+.env
+
+# Logs and databases
+logs/
+*.log
+*.sql
+*.sqlite
+*.db
+
+# Local configuration files
+instance/
+
+# Compiled Python files
+*.pyc
+
+# Jupyter Notebook temporary files
+.ipynb_checkpoints/
+
+
