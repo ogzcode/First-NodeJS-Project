@@ -7,6 +7,9 @@ class UserServices:
     @staticmethod
     def get_user_by_email(db: Session, email: str) -> UserSchemas:
         user = db.query(User).filter(User.email == email).first()
+        if not user:
+            return None
+        
         return UserSchemas(**user.__dict__)
 
     @staticmethod

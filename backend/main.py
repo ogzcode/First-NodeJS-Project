@@ -1,13 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from database.config import db
 from dotenv import load_dotenv
+load_dotenv()
+
+from database.config import db
 
 from routes import auth, user
 
 app = FastAPI()
 
-load_dotenv()
 
 db.create_tables()
 
