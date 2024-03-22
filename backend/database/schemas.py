@@ -13,3 +13,18 @@ class User(UserBase):
 
     class Config:
         from_attributes = True
+
+class UserDetailsBase(BaseModel):
+    user_id: int
+    first_name: str
+    last_name: str
+    address: str
+    phone: str
+    role: str
+    created_at: str
+
+class UserDetails(UserDetailsBase):
+    id: int
+
+    class Config:
+        from_attributes = True
