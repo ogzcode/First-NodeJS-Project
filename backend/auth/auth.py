@@ -33,7 +33,7 @@ class TokenServices:
         )
 
         token = credentials.credentials
-
+        
         try:
             payload = self.decode_access_token(token)
 

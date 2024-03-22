@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from typing import Generator
 import os
 
-SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
+SQLALCHEMY_DATABASE_URL = "sqlite:///./test.db"
 
 class Database:
     def __init__(self):
