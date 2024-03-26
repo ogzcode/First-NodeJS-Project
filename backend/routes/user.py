@@ -60,3 +60,16 @@ async def delete_all_user(db: Session = Depends(db.get_session)):
         data={},
         status=200
     )
+
+@router.delete("/admin/deleteUserById", response_model=CustomResponse, dependencies=[Depends(token_services.check_role("admin"))], summary="Delete user for only admin role")
+async def delete_user(id: int, db: Session = Depends(db.get_session)):
+    try:
+        res = UserServices().delete_user(db, id)
+    except HTTPException as e:
+        raise e
+    
+    return CustomResponse(
+        message="User deleted successfully",
+        data={},
+        status=200
+    )
