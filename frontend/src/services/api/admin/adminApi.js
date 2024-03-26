@@ -4,6 +4,7 @@ const url = {
     getAllUser: "/user/admin/getAllUser",
     deleteAllUser: "/user/admin/deleteAllUser",
     createUser: "/user/admin/createUser",
+    deleteUserById: "/user/admin/deleteUserById",
 }
 
 export const getAllUsers = async () => {
@@ -16,4 +17,8 @@ export const deleteAllUser = async () => {
 
 export const createUser = async (data) => {
     return await request.post(url.createUser, data);
+}
+
+export const deleteUserById = async (id) => {
+    return await request.delete(url.deleteUserById + `?id=${id}`);
 }

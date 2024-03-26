@@ -29,8 +29,8 @@ export default function ConfirmDialog({ open, onClose, onConfirm, title, message
                 </div>
                 <p className="text-stone-700 break-all mt-4">{message}</p>
                 <div className="flex justify-end gap-4 mt-4">
-                    <button onClick={onClose} className="px-4 py-2 text-sm tracking-wide font-semibold border border-stone-300 text-stone-700 rounded-lg">Cancel</button>
-                    <button onClick={onConfirm} className={`px-4 py-2 text-sm tracking-wide font-bold text-white rounded-lg ${getStatusColor()}`}>Confirm</button>
+                    <button onClick={onClose} className="px-3 py-1 text-sm tracking-wide font-semibold border border-stone-300 text-stone-700 rounded-md">Cancel</button>
+                    <button onClick={onConfirm} className={`px-3 py-1 text-sm tracking-wide font-bold text-white rounded-md ${getStatusColor()}`}>Confirm</button>
                 </div>
             </div>
         </div >
