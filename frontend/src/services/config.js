@@ -29,7 +29,7 @@ export const setupAxiosInterceptors = () => {
         (error) => {
             if (error.response.status === 401) {
                 removeProjectToken();
-                window.location.href = '/login';
+                window.location.reload();
             }
             return Promise.reject(error);
         }
