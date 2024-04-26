@@ -1,0 +1,26 @@
+.sidebar-open {
+    animation: slide-in 0.5s forwards;
+}
+
+.sidebar-close {
+    animation: slide-out 0.3s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 16rem;
+    }
+}
+
+
+@keyframes slide-out {
+    0% {
+        width: 16rem;
+    }
+    100% {
+        width: 0;
+    }
+}
